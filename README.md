@@ -72,10 +72,12 @@ Click **Print** in the dialog to go to Print View, and be sure to select **Card*
 
 #### 4. Example:
 Printing DocType Description.
-> Document JSON.
->```json
+> Document JSON. 
+
+```json
 {"card_name":"Description","doctype_card":"DocType","fixed_width":0,"card_width":0,"cards_per_page_width":"2","fixed_height":1,"card_height":30,"layout":"<div class=\"card text-white bg-secondary\">\n<div class=\"card-header\">{{ doc_card.name }}</div>\n  <div class=\"card-body\">\n    <p class=\"card-text\">{{ doc_card.description if  doc_card.description else \"\"}}</p>\n    <p class=\"card-text\">{{ doc_card.document if  doc_card.documentation else \"\"}}</p>\n  </div>\n</div>\n\n<style>\n    .card-header{\n        color: #fff;\n        background-color: #888;\n        font-size: 14pt;\n    }\n    .card{\n        border: solid #888;\n        min-height:100%;\n    }\n    .card-text{\n        padding: 1mm;\n        font-size: 10pt;\n    }\n</style>","border":"dashed","padding":2,"border_width":"thin","doctype":"Card"}
 ```
+
 > **_hint:_**
 > Copy the **JSON** text and paste it anywhere in browser while browsing frappe.
 > to create **new doc** from the **JSON**.
