@@ -1,7 +1,6 @@
 # Card
 
 Print multiple documents in one page.
-<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 updateOnSave:1 -->
 
 - [Installation.](#installation)
   - [1. Dependencies](#1-dependencies)
@@ -13,14 +12,12 @@ Print multiple documents in one page.
   - [4. Example:](#4-example)
 - [License](#license)
 
-<!-- /TOC -->
 
 **Card** is an application built on **frappe** framework.
 
 ## Installation.
 #### 1. Dependencies
-1. frappe-bench
-2. frappe.
+1. frappe.
 
 #### 2. Installation.
 
