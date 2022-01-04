@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "autoname": "format:{card_name} - {doctype_card}",
+ "creation": "2021-12-04 10:59:49.457566",
+ "description": "Print multiple documents in one page.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "card_name",
+  "column_break_2",
+  "doctype_card",
+  "size_section",
+  "fixed_width",
+  "card_width",
+  "cards_per_page_width",
+  "column_break_3",
+  "fixed_height",
+  "card_height",
+  "layout_section",
+  "layout",
+  "border_section",
+  "border",
+  "border_width",
+  "column_break_15",
+  "padding",
+  "section_break_10",
+  "filters",
+  "filter_fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "card_name",
+   "fieldtype": "Data",
+   "label": "Card Name",
+   "permlevel": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctype_card",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType",
+   "permlevel": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "size_section",
+   "fieldtype": "Section Break",
+   "label": "Size"
+  },
+  {
+   "default": "1",
+   "fieldname": "fixed_width",
+   "fieldtype": "Check",
+   "label": "Fixed Width",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:(doc.fixed_width)",
+   "description": "size is in millimeter",
+   "fieldname": "card_width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Card Width",
+   "mandatory_depends_on": "eval:(doc.fixed_width)",
+   "non_negative": 1,
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "fixed_height",
+   "fieldtype": "Check",
+   "label": "Fixed Height",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:(doc.fixed_height)",
+   "description": "size is in millimeter",
+   "fieldname": "card_height",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Card Height",
+   "mandatory_depends_on": "eval:(doc.fixed_height)",
+   "non_negative": 1,
+   "permlevel": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "layout_section",
+   "fieldtype": "Section Break",
+   "label": "Layout"
+  },
+  {
+   "default": "1",
+   "description": "padding in millimeter",
+   "fieldname": "padding",
+   "fieldtype": "Float",
+   "label": "padding",
+   "permlevel": 1
+  },
+  {
+   "description": "{{ doc }} represent this document.\n{{ doc_card }} represent each selected document.",
+   "fieldname": "layout",
+   "fieldtype": "Code",
+   "label": "Layout",
+   "options": "HTML",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "border_section",
+   "fieldtype": "Section Break",
+   "label": "Border",
+   "permlevel": 1
+  },
+  {
+   "default": "solid",
+   "fieldname": "border",
+   "fieldtype": "Select",
+   "label": "Border",
+   "options": "none\nsolid\ndashed\ndotted",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "medium",
+   "depends_on": "eval:(doc.border != \"none\")",
+   "fieldname": "border_width",
+   "fieldtype": "Select",
+   "label": "Border Width",
+   "non_negative": 1,
+   "options": "thin\nmedium\nthick",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filters",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Filters",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "filter_fields",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Filter Fields",
+   "permlevel": 2,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "2",
+   "depends_on": "eval:(! doc.fixed_width)",
+   "fieldname": "cards_per_page_width",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cards Per Page Width",
+   "mandatory_depends_on": "eval:(! doc.fixed_width)",
+   "options": "1\n2\n3\n4\n6\n12",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-03 16:29:16.361354",
+ "modified_by": "Administrator",
+ "module": "Card",
+ "name": "Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Print User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Print User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Print User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
