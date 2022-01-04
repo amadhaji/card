@@ -1,0 +1,44 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-01-02 11:59:39.855037",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends": "Tools",
+ "extends_another_page": 1,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Card",
+ "links": [
+  {
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "Printing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Card",
+   "link_to": "Card",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-01-02 15:16:12.392390",
+ "modified_by": "Administrator",
+ "module": "Card",
+ "name": "Card",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}
