@@ -17,7 +17,7 @@ Print multiple documents in one page.
 
 ## Installation.
 #### 1. Dependencies
-1. frappe.
+1. frappe (13.X.X) (tested on _13.17.0_).
 
 #### 2. Installation.
 
