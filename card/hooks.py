@@ -7,7 +7,7 @@ app_description = "Print multi document in page."
 app_icon = "octicon octicon-note"
 app_color = "grey"
 app_email = "amadhaji@open-alt.com"
-app_license = "GPLv3+"
+app_license = "Apache License Version 2.0"
 
 # Includes in <head>
 # ------------------
